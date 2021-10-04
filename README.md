@@ -1,4 +1,1 @@
-# Olá Mundo 
- primeiro repositorio do curso git e github
-
-repositorio criado durante uma aula ao vivo
+_Esse repositorio tem como objetivo, demostrar a minha prendizagem, referente ao curso de: **JavaScript**_
