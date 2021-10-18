@@ -4,29 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu primeiro site em repositorio</title>
-    <style>
-        body {
-            background-color: dimgray;
-            font: italic 20pt arial; 
-            color: rgba(236, 245, 240, 0.925);}
-
-        h1{ color: darkblue;}
-        h2{color: darkblue;}
-    </style>
+    <title>Hallamman's Site'</title>
 </head>
+<style>
+    body{background: darkgrey; font: italic 30px arial; color: rgb(16, 102, 13);}
+    h1{font: normal 40px arial; color: rgb(9, 7, 128);}
+    p{font: italic 21px arial; color: black;}
+    input{font: normal 18px arial; color: red; text-align: center;}
+    div#res{font: italic 22px arial; color:rgb(9, 7, 128); margin-top: 20px;}
+    div#area{font: normal 22px arial; color: rgb(10, 10, 10); margin-top: 50px; width: 600px; height: 90px; line-height: 89px; text-align: center; background: white;}
+
+</style>
 <body>
-    <h1>Olá, Mundo</h1>
-    <p>
-        Já me livrei da maldição.
-    </p>
-    <hr>
-    <h2>Aprendizagem</h2>
-    <p>
-        Aula nº: 1 > 'Criando variaveis e interação com "prompt, confirm e alert"'.
-    </p>
+   
     <script>
-        window.alert('Olá, seja Bem - Vindo a minha demostração de aprendizagem.')
+        window.alert('Óla, Seja Bem-Vindo ao Site de Frederico Hallamman')
+        var nome = window.prompt('Qual é o seu nome ?? ')
+        document.write(`Óla, <strong>${nome.toUpperCase()}</strong>, é um prazer te conhecer !!!!`)
+
+        function calcular() 
+        {
+            var v1 = document.getElementById('tx1')
+            var v2 = document.getElementById('tx2')
+            var v3 = document.getElementById('tx3')
+            var res = document.getElementById('res')
+            var n1 = Number(v1.value)
+            var n2 = Number(v2.value)
+            var n3 = Number(v3.value)
+            var s = n1 + n2 * n3
+            res.innerHTML = `no cálculo: <strong>${n1}</strong>+<strong>${n2}</strong>*<strong>${n3}</strong> é igual a: <strong>${s}</strong>`                    
+        }  
+        function clicar() 
+        {area.innerText = 'Clique no botçao para "Calcular"' 
+        area.style.background = 'red'}
+        function entrou() 
+        {area.innerText = 'Digite os valor na caixa de texto para calcular !!' 
+         area.style.background = 'blue'}
     </script>
+
+<h1><strong>Site de Aprendizagem.</strong></h1>
+<hr>
+<p>Óla, este site é uma amostra do aprendizado de <strong>Frederico Hallamman</strong>, nele contém: ( titulos, paragrafos, interação com usuario, sistema simples de matemática, uma pequena animação do site, quando clica muda de cor e muda também o texto, logo no fim da pagina contem uma imagem com todo o codigo "estrutura completa do site" e quando tempo levou para concluir esse site, não levando em consideração a organização do site, pois o objetivo era mostrar todas as funcionabilidades do aprendizado.). </p>
+<hr>
+<input type="number" name="tx1" id="tx1"> +
+<input type="number" name="tx2" id="tx2"> *
+<input type="number" name="tx3" id="tx3"> = 
+<input type="button" value="calcular" onclick="calcular()">
+<div id="res">resultado ...</div>
+<hr>
+<div id="area" onclick="clicar()", onmouseenter="entrou()", onmouseout="saiu()">Vamos calcular...</div> 
+
 </body>
 </html>
